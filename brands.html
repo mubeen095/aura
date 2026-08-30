@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Influencer Marketing Platform for Brands | RIZZ</title>
+<meta name="description" content="Find creators. Run campaigns that perform. RIZZ handles creator discovery, campaign execution and measurement from brief to final report — India-first influencer marketing for brands.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Find Creators, Run Campaigns That Perform | RIZZ">
+<meta property="og:description" content="Creator discovery, campaign execution and measurement — from brief to final report. India influencer marketing for brands.">
+<link rel="icon" type="image/png" sizes="32x32" href="/_next_public/favicons/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/_next_public/favicons/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="stylesheet" href="/css/social-dock.css">
+<link rel="stylesheet" href="/originkit-dist/limelight-nav.css">
+
+<link rel="stylesheet" href="/originkit-dist/rizz-footer-02.css">
+
+<link rel="stylesheet" href="/originkit-dist/rizz-prism-grid.css"><link rel="stylesheet" href="/originkit-dist/rizz-cascade-text.css">
+
+<style>
+/* ================================================================
+   brands.html — page-scoped styles only (no global CSS changes).
+   Keyed to .bw-* and #brands-* so nothing leaks to other pages.
+   ================================================================ */
+
+/* -- hero headline accent -------------------------------------- */
+.brand-h1 em {
+  font-style: normal;
+  color: transparent;
+  background: linear-gradient(92deg, #3096ff 0%, #7fb6ff 60%, #3096ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.bw-micro {
+  margin: 22px 0 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 22px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.2em;
+  color: var(--text-dim);
+}
+.bw-micro b { color: var(--blue-2); font-weight: 500; }
+
+/* -- WHY RIZZ system grid -------------------------------------- */
+.bw-sys {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 26px;
+}
+.bw-sys-card {
+  border: 1px solid rgba(48, 150, 255, 0.32);
+  border-radius: 16px;
+  padding: 22px 24px;
+  background: rgba(0, 100, 255, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color 0.28s ease, transform 0.3s var(--ease), box-shadow 0.3s ease;
+}
+.bw-sys-card:hover {
+  border-color: rgba(48, 150, 255, 0.7);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(0, 100, 255, 0.1);
+}
+.bw-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+}
+.bw-sys-card b {
+  font-family: Gilroy, Inter, sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+.bw-sys-card span { font-size: 14px; line-height: 1.62; color: #8fc2ff; }
+
+/* -- creator-methodology comparison ----------------------------- */
+.bw-compare {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: stretch;
+  gap: 14px;
+  max-width: 860px;
+  margin: 28px auto 0;
+}
+.bw-cell {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 28px 24px;
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+}
+.bw-cell .cnum {
+  font-family: Gilroy, Inter, sans-serif;
+  font-weight: 800;
+  font-size: clamp(34px, 5vw, 60px);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: #fff;
+}
+.bw-cell .clabel {
+  font-family: 'DM Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+.bw-cell.accent {
+  border-color: rgba(48, 150, 255, 0.55);
+  background: rgba(0, 100, 255, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(48, 150, 255, 0.25), 0 0 40px rgba(0, 100, 255, 0.14);
+}
+.bw-cell.accent .cnum { color: var(--blue-2); }
+.bw-cell.accent .clabel { color: #8fc2ff; }
+.bw-vs {
+  align-self: center;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  color: var(--text-dim);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 14px 18px;
+  background: var(--panel);
+}
+.bw-illus {
+  margin: 14px 0 0;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: #6f7379;
+  text-align: center;
+}
+
+/* -- campaign process cards ------------------------------------- */
+.bw-step {
+  transition: border-color 0.28s ease, transform 0.3s var(--ease), box-shadow 0.3s ease;
+}
+.bw-step:hover {
+  border-color: rgba(48, 150, 255, 0.7);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(0, 100, 255, 0.12);
+}
+
+/* -- stats (PAN-INDIA legibility) -------------------------------- */
+.brand-stats .stat b { font-size: clamp(24px, 3vw, 40px); letter-spacing: -0.02em; }
+
+/* -- what happens next -------------------------------------------- */
+.bw-next {
+  max-width: 760px;
+  margin: 34px auto 0;
+  text-align: center;
+}
+.bw-next-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--blue-2);
+  margin-bottom: 18px;
+}
+.bw-next-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  counter-reset: next;
+}
+.bw-next-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--panel);
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+  transition: border-color 0.28s ease, transform 0.3s var(--ease);
+}
+.bw-next-card:hover { border-color: rgba(48, 150, 255, 0.6); transform: translateY(-3px); }
+.bw-next-card span {
+  font-family: Gilroy, Inter, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #fff;
+}
+.bw-noobl {
+  display: inline-block;
+  margin-top: 24px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: #fff;
+  border: 1px solid rgba(48, 150, 255, 0.55);
+  border-radius: 999px;
+  padding: 12px 22px;
+  background: rgba(0, 100, 255, 0.1);
+}
+
+/* == responsive ================================================== */
+@media (max-width: 900px) {
+  .bw-next-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .bw-compare { grid-template-columns: 1fr; }
+  .bw-vs { justify-self: center; order: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bw-sys-card, .bw-step, .bw-next-card { transition: none; }
+}
+</style>
+</head>
+<body class="pg-page">
+
+<div class="pg-background" aria-hidden="true">
+  <div class="pg-root"></div>
+  <div class="pg-veil"></div>
+</div>
+
+<nav class="social-dock" aria-label="Primary">
+  <ul class="social-dock-list">
+    <li><a class="sd-link sd--nav" href="/"><span class="sd-label">HOME</span><svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></a></li><li><a class="sd-link sd--nav" href="/creators.html"><span class="sd-label">CREATORS</span><svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="4"/><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></a></li><li><a class="sd-link sd--nav on" href="/brands.html" aria-current="page"><span class="sd-label">BRANDS</span><svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></a></li><li><a class="sd-link sd--nav" href="/marketing.html"><span class="sd-label">MARKETING</span><svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></a></li><li><a class="sd-link sd--nav" href="/faqs/index.html"><span class="sd-label">FAQs</span><svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></a></li>
+  </ul>
+</nav>
+
+<nav class="limelight-nav" aria-label="Mobile navigation" data-limelight>
+  <a class="limelight-item" href="/" aria-label="Home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></a>
+  <a class="limelight-item" href="/brands.html" aria-label="Brands"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></a>
+  <a class="limelight-item" href="/creators.html" aria-label="Creators"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="4"/><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></a>
+  <a class="limelight-item" href="/faqs/index.html" aria-label="FAQs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></a>
+  <div class="limelight-indicator" data-limelight-indicator aria-hidden="true"><div class="limelight-glow"></div></div>
+</nav>
+
+<div class="social-floating" id="social-floating">
+  <div class="sd-backdrop" aria-hidden="true"></div>
+  <div class="sd-dock">
+    <a class="sd-fab-item sd--nav" href="/" aria-label="HOME"><span class="sd-tip">HOME</span><svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></a><a class="sd-fab-item sd--nav" href="/creators.html" aria-label="CREATORS"><span class="sd-tip">CREATORS</span><svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="4"/><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></a><a class="sd-fab-item sd--nav is-open" href="/brands.html" aria-label="BRANDS"><span class="sd-tip">BRANDS</span><svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></a><a class="sd-fab-item sd--nav" href="/marketing.html" aria-label="MARKETING"><span class="sd-tip">MARKETING</span><svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></a><a class="sd-fab-item sd--nav" href="/faqs/index.html" aria-label="FAQs"><span class="sd-tip">FAQs</span><svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></a>
+  </div>
+  <button class="sd-fab" id="sd-fab" type="button" aria-label="Toggle menu" aria-expanded="false">
+    <svg class="sd-ico-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+    <svg class="sd-ico-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+</div>
+
+
+<!-- ============ SIDEBAR ============ -->
+
+
+<div class="main">
+
+<!-- ============ APPBAR ============ -->
+<header class="appbar" role="banner">
+  <a class="app-brand" href="/" aria-label="RIZZ home">
+    <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="rzB" x1="0" y1="0" x2="64" y2="64"><stop offset="0" stop-color="#3096FF"/><stop offset="1" stop-color="#0064FF"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="18" fill="url(#rzB)"/><text x="32" y="44" text-anchor="middle" font-family="Inter, Gilroy-SemiBold, sans-serif" font-size="30" font-weight="700" fill="#fff">R</text></svg>
+    <span class="app-word">RIZZ</span>
+  </a>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="reg-hero" id="brands-hero">
+    <div class="container">
+      <p class="mono eyebrow">Brand-side · Influencer Marketing · India</p>
+      <h1 class="h1 brand-h1" style="max-width:20ch;margin-inline:auto">FIND CREATORS.<br>RUN CAMPAIGNS <em>THAT PERFORM.</em></h1>
+      <p class="body-copy" style="margin:18px auto 6px;text-align:center;max-width:640px">Stop wasting time finding creators, negotiating deals and chasing deliverables. RIZZ handles creator discovery, campaign execution and measurement — from brief to final report.</p>
+      <div class="cta-actions" style="margin-top:30px">
+        <a class="btn btn-blue btn-lg" href="#campaign-inquiry">START A CAMPAIGN<svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        <a class="btn btn-ghost btn-lg" href="#process">SEE HOW IT WORKS</a>
+      </div>
+      <p class="bw-micro" style="margin-top:26px">DISCOVERY&nbsp;<b>·</b>&nbsp;EXECUTION&nbsp;<b>·</b>&nbsp;MEASUREMENT&nbsp;<b>·</b>&nbsp;REPORTING</p>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <section class="section tight" style="padding-block:10px">
+    <div class="marquee" style="border-block:1px solid var(--line);padding-block:14px;border-radius:0">
+      <div class="marq-track" aria-hidden="false">
+        <span class="marq-item">CREATOR DISCOVERY</span><span class="marq-item gold">CAMPAIGN MANAGEMENT</span><span class="marq-item">PERFORMANCE REPORTING</span><span class="marq-item gold">AUDIENCE QUALITY OVER FOLLOWER COUNT</span><span class="marq-item">PAN-INDIA COVERAGE</span><span class="marq-item gold">CREATORS IN 28+ LANGUAGES</span><span class="marq-item">CLEAR PAYMENT TERMS</span><span class="marq-item gold">NO LOCK-INS</span><span class="marq-item">FROM BRIEF TO FINAL REPORT</span><span class="marq-item gold">STRAIGHT TALK, CLEAR PROCESS</span><span class="marq-item">MEASURED OUTCOMES</span><span class="marq-item gold">INDIA-FIRST CREATOR NETWORK</span>
+        <span class="marq-item">CREATOR DISCOVERY</span><span class="marq-item gold">CAMPAIGN MANAGEMENT</span><span class="marq-item">PERFORMANCE REPORTING</span><span class="marq-item gold">AUDIENCE QUALITY OVER FOLLOWER COUNT</span><span class="marq-item">PAN-INDIA COVERAGE</span><span class="marq-item gold">CREATORS IN 28+ LANGUAGES</span><span class="marq-item">CLEAR PAYMENT TERMS</span><span class="marq-item gold">NO LOCK-INS</span><span class="marq-item">FROM BRIEF TO FINAL REPORT</span><span class="marq-item gold">STRAIGHT TALK, CLEAR PROCESS</span><span class="marq-item">MEASURED OUTCOMES</span><span class="marq-item gold">INDIA-FIRST CREATOR NETWORK</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY RIZZ ============ -->
+  <section class="section" id="why">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="mono eyebrow">Why RIZZ</p>
+        <h2 class="h2">ONE CAMPAIGN.<br><em>ZERO CHAOS.</em></h2>
+      </div>
+      <p class="body-copy reveal" style="margin:0 auto;text-align:center;max-width:600px">From finding the right creators to measuring what happened, RIZZ keeps the entire campaign moving.</p>
+      <div class="bw-sys">
+        <div class="bw-sys-card reveal"><p class="bw-num">01</p><b>Find</b><span>Find creators that actually fit the brand, audience and campaign.</span></div>
+        <div class="bw-sys-card reveal"><p class="bw-num">02</p><b>Connect</b><span>We handle creator outreach and negotiation.</span></div>
+        <div class="bw-sys-card reveal"><p class="bw-num">03</p><b>Manage</b><span>Briefs, timelines, deliverables, revisions and approvals stay organized.</span></div>
+        <div class="bw-sys-card reveal"><p class="bw-num">04</p><b>Measure</b><span>Track campaign performance and understand what actually worked.</span></div>
+        <div class="bw-sys-card reveal"><p class="bw-num">05</p><b>Pay</b><span>Keep creator payment terms clear and upfront.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DON'T CHOOSE BY FOLLOWERS ============ -->
+  <section class="section tight" id="selector">
+    <div class="container narrow" style="text-align:center">
+      <div class="section-head reveal">
+        <p class="mono eyebrow">Straight talk</p>
+        <h2 class="h2">DON'T CHOOSE CREATORS<br><em>BY FOLLOWERS.</em></h2>
+      </div>
+      <p class="body-copy reveal" style="margin:16px auto 0;text-align:center;max-width:600px">Follower count tells you how big a creator looks. Audience quality tells you whether a campaign can work.</p>
+
+      <div class="bw-compare reveal" role="img" aria-label="500K followers versus 25K people who actually care">
+        <div class="bw-cell">
+          <span class="cnum">500K</span>
+          <span class="clabel">Followers</span>
+        </div>
+        <div class="bw-vs">VS</div>
+        <div class="bw-cell accent">
+          <span class="cnum">25K</span>
+          <span class="clabel">People who actually care.</span>
+        </div>
+      </div>
+      <p class="bw-illus reveal">ILLUSTRATIVE EXAMPLE — NOT A RIZZ CAMPAIGN RESULT</p>
+
+      <p class="mono" style="margin-top:30px;color:var(--blue-2)">WE LOOK FOR CREATORS WHO FIT — BEYOND THE VANITY METRICS</p>
+      <div class="walk-chips reveal" style="margin-top:16px">
+        <span class="chip"><span class="dot"></span>AUDIENCE FIT</span>
+        <span class="chip"><span class="dot"></span>ENGAGEMENT QUALITY</span>
+        <span class="chip"><span class="dot"></span>CONTENT QUALITY</span>
+        <span class="chip"><span class="dot"></span>LOCATION</span>
+        <span class="chip"><span class="dot"></span>LANGUAGE</span>
+        <span class="chip"><span class="dot"></span>PAST PERFORMANCE</span>
+      </div>
+      <p class="body-copy reveal" style="margin:18px auto 0;text-align:center;max-width:600px">We look beyond vanity metrics to find creators whose audience, content and context actually fit your campaign.</p>
+
+      <div class="stat-row brand-stats reveal" style="margin-top:30px">
+        <div class="stat"><b class="gold">28+</b><span>LANGUAGES</span></div>
+        <div class="stat"><b>PAN-INDIA</b><span>CREATOR COVERAGE</span></div>
+        <div class="stat"><b class="gold">100%</b><span>CAMPAIGN REPORTING</span></div>
+        <div class="stat"><b>1</b><span>TEAM. BRIEF → REPORT</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="section tight" id="process">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="mono eyebrow">How it works</p>
+        <h2 class="h2" style="text-align:left">FROM BRIEF<br><em>TO FINAL REPORT.</em></h2>
+      </div>
+      <div class="logi-grid" style="margin-top:22px">
+        <div class="logi-card bw-step"><b>01 — BRIEF</b><span>Tell us the goal, audience and budget.</span></div>
+        <div class="logi-card bw-step"><b>02 — DISCOVER</b><span>We shortlist creators who fit your niche, audience, language and campaign.</span></div>
+        <div class="logi-card bw-step"><b>03 — ACTIVATE</b><span>We handle outreach, negotiation, contracts and deliverables.</span></div>
+        <div class="logi-card bw-step"><b>04 — MANAGE</b><span>We keep the campaign moving from approval to publishing.</span></div>
+        <div class="logi-card bw-step"><b>05 — MEASURE</b><span>Track reach, engagement and campaign performance.</span></div>
+        <div class="logi-card bw-step"><b>06 — REPEAT</b><span>Identify what worked and scale the strongest creators.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CAMPAIGN INQUIRY ============ -->
+  <section class="section" id="campaign-inquiry">
+    <div class="container narrow">
+      <div class="section-head reveal">
+        <p class="mono eyebrow">Let's talk</p>
+        <h2 class="h2">LET'S BUILD<br><em>YOUR CAMPAIGN.</em></h2>
+      </div>
+      <p class="body-copy reveal" style="margin:6px auto 22px;text-align:center;max-width:560px">Tell us what you're trying to achieve. We'll come back with a creator strategy built around your goal.</p>
+
+      <div class="form-card reveal" id="inquiryCard" style="max-width:760px;margin-inline:auto">
+        <form id="campaignForm" novalidate>
+          <div class="form-grid">
+            <div class="field" data-wrap="brandName">
+              <label for="inq_brandName">Brand / company <span class="req">*</span></label>
+              <input type="text" id="inq_brandName" name="brandName" data-field="brandName" placeholder="e.g. Foxtale">
+              <p class="fmsg" data-msg="brandName"></p>
+            </div>
+            <div class="field" data-wrap="contactName">
+              <label for="inq_contactName">Your name <span class="req">*</span></label>
+              <input type="text" id="inq_contactName" name="contactName" data-field="contactName" placeholder="Full name">
+              <p class="fmsg" data-msg="contactName"></p>
+            </div>
+            <div class="field" data-wrap="email">
+              <label for="inq_email">Work email <span class="req">*</span></label>
+              <input type="email" id="inq_email" name="email" data-field="email" placeholder="you@brand.com">
+              <p class="fmsg" data-msg="email"></p>
+            </div>
+            <div class="field" data-wrap="phone">
+              <label for="inq_phone">Phone</label>
+              <input type="tel" id="inq_phone" name="phone" data-field="phone" maxlength="10" placeholder="10-digit mobile (optional)">
+              <p class="fmsg" data-msg="phone"></p>
+            </div>
+            <div class="field" data-wrap="goal">
+              <label for="inq_goal">Campaign objective <span class="req">*</span></label>
+              <select id="inq_goal" name="goal" data-field="goal"><option value="">Select…</option><option>Brand awareness</option><option>Product launch</option><option>Sales &amp; conversion</option><option>Content &amp; UGC supply</option><option>Regional / language reach</option><option>Ongoing partner roster</option><option>Something else</option></select>
+              <p class="fmsg" data-msg="goal"></p>
+            </div>
+            <div class="field" data-wrap="budget">
+              <label for="inq_budget">Estimated budget (₹)</label>
+              <select id="inq_budget" name="budget" data-field="budget"><option value="">Optional</option><option>Under ₹1,00,000</option><option>₹1–5 lakh</option><option>₹5–20 lakh</option><option>₹20 lakh +</option></select>
+              <p class="fmsg" data-msg="budget"></p>
+            </div>
+            <div class="field" data-wrap="targetAudience">
+              <label for="inq_targetAudience">Target audience</label>
+              <input type="text" id="inq_targetAudience" name="targetAudience" data-field="targetAudience" placeholder="Age, location, interests — e.g. women 20–30 in metros">
+              <p class="fmsg" data-msg="targetAudience"></p>
+            </div>
+            <div class="field" data-wrap="timeline">
+              <label for="inq_timeline">Campaign timeline</label>
+              <input type="text" id="inq_timeline" name="timeline" data-field="timeline" placeholder="e.g. next 30 days">
+              <p class="fmsg" data-msg="timeline"></p>
+            </div>
+            <div class="field full" data-wrap="message">
+              <label for="inq_message">Tell us about the campaign</label>
+              <textarea id="inq_message" name="message" data-field="message" placeholder="Product, deadlines, references — anything that helps us plan."></textarea>
+              <p class="fmsg" data-msg="message"></p>
+            </div>
+          </div>
+          <div class="banner-err" id="inquiryErr" role="alert"></div>
+          <div class="cta-actions" style="margin-top:14px">
+            <button class="btn btn-blue btn-lg" type="submit" id="inquirySubmit">GET MY CAMPAIGN PLAN<svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+          </div>
+        </form>
+        <div id="inquirySuccess" style="display:none"></div>
+      </div>
+
+      <!-- what happens next -->
+      <div class="bw-next reveal">
+        <p class="bw-next-eyebrow">WHAT HAPPENS NEXT</p>
+        <div class="bw-next-grid">
+          <div class="bw-next-card"><p class="bw-num">01</p><span>WE REVIEW YOUR BRIEF</span></div>
+          <div class="bw-next-card"><p class="bw-num">02</p><span>WE BUILD THE CREATOR STRATEGY</span></div>
+          <div class="bw-next-card"><p class="bw-num">03</p><span>WE SEND YOU THE PLAN</span></div>
+          <div class="bw-next-card"><p class="bw-num">04</p><span>YOU DECIDE WHETHER TO MOVE FORWARD</span></div>
+        </div>
+        <p class="bw-noobl">NO OBLIGATION. NO LOCK-IN.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="fx-footer" aria-label="RIZZ site footer">
+  <div class="fx-footer-glow" aria-hidden="true">
+    <img class="fx-footer-glow-img" src="/originkit/footer-02/gradient-shapes.svg" alt="" width="2238" height="545">
+  </div>
+  <div class="fx-footer-inner">
+    <div class="fx-footer-card">
+      <div class="fx-footer-content">
+        <div class="fx-footer-brand">
+          <div class="fx-footer-brand-text">
+            <p class="fx-brand-name">RIZZ</p>
+            <p class="fx-brand-tag">Creator management and influencer marketing. We connect India's creators with brands that want authentic content.</p>
+          </div>
+          <ul class="fx-footer-social" aria-label="Social links">
+            <li style="animation-delay:0ms"><a class="fx-social-btn" href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X" tabindex="0"><span class="fx-social-ico"><img src="/originkit/footer-02/x.svg" alt="" width="20" height="20"></span></a></li>
+            <li style="animation-delay:120ms"><a class="fx-social-btn" href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" tabindex="0"><span class="fx-social-ico"><img src="/originkit/footer-02/instagram.svg" alt="" width="20" height="20"></span></a></li>
+            <li style="animation-delay:240ms"><a class="fx-social-btn" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" tabindex="0"><span class="fx-social-ico"><img src="/originkit/footer-02/linkedin.svg" alt="" width="20" height="20"></span></a></li>
+          </ul>
+          <p class="fx-footer-copy">© <span data-year>2026</span> RIZZ&nbsp;&nbsp;·&nbsp;&nbsp;CREATE. CONNECT. GET PAID.</p>
+        </div>
+        <nav class="fx-footer-links" aria-label="Footer">
+          <div class="fx-footer-col">
+            <p class="fx-col-title">Explore</p>
+            <ul class="fx-col-list">
+              <li><a href="/">Home</a></li>
+              <li><a href="/creators.html">The network</a></li>
+              <li><a href="/register.html">Apply to join</a></li>
+              <li><a href="/faqs/index.html">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="fx-footer-col">
+            <p class="fx-col-title">Services</p>
+            <ul class="fx-col-list">
+              <li><a href="/brands.html">Start a campaign</a></li>
+              <li><a href="/marketing.html">Marketing services</a></li>
+            </ul>
+          </div>
+          <div class="fx-footer-col">
+            <p class="fx-col-title">Legal</p>
+            <ul class="fx-col-list">
+              <li><a href="/privacy.html">Privacy policy</a></li>
+              <li><a href="/terms.html">Terms of use</a></li>
+              <li><a href="/refund-policy.html">Refund policy</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="fx-footer-tetris" aria-hidden="true">
+        <canvas class="fx-tetris-canvas"></canvas>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /.main -->
+
+<script src="/js/site-config.js"></script>
+<script src="/js/brand.js" defer=""></script>
+<script src="/js/pages.js"></script>
+<script>
+(function (window, document) {
+  'use strict';
+  var CFG = window.RIZZ_CONFIG || {};
+  var ENDPOINT = (CFG.endpoints && CFG.endpoints.campaignInquiry) || '/api/campaign-inquiry';
+
+  function markError(name, msg) {
+    var wrap = document.querySelector('[data-wrap="' + name + '"]');
+    if (!wrap) return;
+    wrap.classList.add('err');
+    var m = wrap.querySelector('[data-msg="' + name + '"]');
+    if (m) m.textContent = msg;
+  }
+  function clearAll() {
+    var errs = document.querySelectorAll('#campaignForm .field.err');
+    errs.forEach(function (f) { f.classList.remove('err'); });
+    document.getElementById('inquiryErr').classList.remove('show');
+  }
+  function isEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test((v || '').trim()); }
+  function isPhone(v) { return /^[6-9]\d{9}$/.test((v || '').trim()); }
+  function val(name) { var el = document.querySelector('[data-field="' + name + '"]'); return el ? el.value.trim() : ''; }
+
+  var form = document.getElementById('campaignForm');
+  var submitBtn = document.getElementById('inquirySubmit');
+  var errBox = document.getElementById('inquiryErr');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    clearAll();
+    var ok = true;
+    function req(name, label, check) {
+      var v = val(name);
+      if (!v) { markError(name, label + ' is required.'); ok = false; return; }
+      if (check && !check(v)) { markError(name, 'Enter a valid ' + label.toLowerCase() + '.'); ok = false; }
+    }
+    req('brandName', 'Brand name');
+    req('contactName', 'Your name');
+    req('email', 'Work email', isEmail);
+    var phoneVal = val('phone');
+    if (phoneVal && !isPhone(phoneVal)) { markError('phone', 'Enter a valid mobile number.'); ok = false; }
+    req('goal', 'Campaign objective');
+    if (!ok) return;
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'SUBMITTING…';
+    errBox.classList.remove('show');
+
+    var payload = {
+      kind: 'campaign-inquiry',
+      brandName: val('brandName'),
+      contactName: val('contactName'),
+      email: val('email'),
+      phone: phoneVal,
+      goal: val('goal'),
+      budget: val('budget'),
+      targetAudience: val('targetAudience'),
+      timeline: val('timeline'),
+      message: val('message'),
+      submittedAt: new Date().toISOString()
+    };
+
+    function done(id, demo) {
+      var success = document.getElementById('inquirySuccess');
+      var demoNote = demo
+        ? '<p class="notice"><b>PREVIEW MODE</b> — this is a standing demo. Your inquiry was captured locally and no backend is connected yet. We\'ll reach out when the real system is live.</p>'
+        : '';
+      success.innerHTML =
+        '<div class="success-mark"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></div>' +
+        '<p class="mono">INQUIRY RECEIVED</p>' +
+        '<h3 class="h3" style="margin:14px 0 8px">WE\'LL BE IN TOUCH.</h3>' +
+        '<div class="reg-id">' + id + '</div>' +
+        '<div class="summary-line">' + payload.brandName + ' — ' + payload.contactName + ' · ' + payload.email + '</div>' +
+        demoNote +
+        '<div class="cta-actions" style="justify-content:center;margin-top:18px"><a class="btn btn-ghost" href="/">BACK TO HOME</a></div>';
+      form.style.display = 'none';
+      success.style.display = 'block';
+      success.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    }
+
+    var req = fetch(ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+
+    var doneFlag = false;
+    var timer = setTimeout(function () { if (!doneFlag) { doneFlag = true; finishLocal(); } }, (CFG.requestTimeoutMs || 8000) + 500);
+    function finishLocal() {
+      if (CFG.fallbackLocalSubmission) {
+        done('RZ-' + new Date().getFullYear() + '-' + Math.random().toString(36).slice(2, 7).toUpperCase(), true);
+      } else {
+        errBox.textContent = 'We could not reach the server. Please try again.';
+        errBox.classList.add('show');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'GET MY CAMPAIGN PLAN';
+      }
+    }
+    req.then(function (r) {
+      clearTimeout(timer);
+      if (doneFlag) return;
+      doneFlag = true;
+      if (!r.ok) return finishLocal();
+      return r.json().then(function (res) {
+        done(res.id || 'RZ-' + new Date().getFullYear(), false);
+      });
+    }).catch(function () {
+      clearTimeout(timer);
+      if (doneFlag) return;
+      doneFlag = true;
+      finishLocal();
+    });
+  });
+})(window, document);
+</script>
+<script defer src="/originkit-dist/rizz-prism-grid.js"></script><script src="/js/social-dock.js" defer></script>
+<script defer src="/originkit-dist/rizz-footer-02.js"></script>
+<script defer src="/originkit-dist/limelight-nav.js"></script>
+
+<script defer src="/originkit-dist/rizz-cascade-text.js"></script>
+</body>
+</html>

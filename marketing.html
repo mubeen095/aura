@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Growth Partner for Modern Brands | RIZZ</title>
+<meta name="description" content="RIZZ is a full-stack growth partner connecting creators, content, paid media, Google, SEO, web, software and analytics into one growth system for modern brands.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Growth Beyond One Channel | RIZZ">
+<meta property="og:description" content="Creators, paid media, search, content and technology — all connected under one roof.">
+<link rel="icon" type="image/png" sizes="32x32" href="/_next_public/favicons/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/_next_public/favicons/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="stylesheet" href="/css/social-dock.css">
+<link rel="stylesheet" href="/originkit-dist/limelight-nav.css">
+
+<link rel="stylesheet" href="/originkit-dist/rizz-footer-02.css">
+
+<link rel="stylesheet" href="/originkit-dist/rizz-prism-grid.css"><link rel="stylesheet" href="/originkit-dist/rizz-cascade-text.css">
+
+<style>
+/* ================================================================
+   marketing.html — page-scoped styles only (no global CSS changes).
+   Keyed to .mk-* so nothing leaks to other pages.
+   ================================================================ */
+
+/* -- hero headline accent -------------------------------------- */
+.mk-h1 em {
+  font-style: normal;
+  color: transparent;
+  background: linear-gradient(92deg, #3096ff 0%, #7fb6ff 60%, #3096ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* -- hero growth-stack pills ------------------------------------- */
+.mk-stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+  max-width: 100%;
+}
+.mk-stack .chip { flex: none; }
+.mk-stack-hint {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: #5f6368;
+  margin: 20px 0 0;
+  text-align: center;
+}
+
+/* -- positioning: big type statement ----------------------------- */
+.mk-statement { text-align: center; max-width: 1000px; margin-inline: auto; }
+.mk-statement .h2 {
+  font-size: clamp(40px, 6.5vw, 96px);
+  letter-spacing: -0.045em;
+  margin-top: 6px;
+}
+.mk-accent {
+  margin-top: 18px;
+  font-family: Gilroy, Inter, sans-serif;
+  font-weight: 800;
+  font-size: clamp(26px, 3.6vw, 48px);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: transparent;
+  background: linear-gradient(92deg, #3096ff 0%, #7fb6ff 60%, #3096ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.mk-statement .body-copy { margin: 26px auto 0; text-align: center; max-width: 620px; }
+
+/* -- services grid ----------------------------------------------- */
+.mk-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+  margin-top: 26px;
+}
+.mk-card {
+  border: 1px solid rgba(48, 150, 255, 0.32);
+  border-radius: 16px;
+  padding: 22px 24px 24px;
+  background: rgba(0, 100, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color 0.28s ease, transform 0.3s var(--ease), box-shadow 0.3s ease, background 0.3s ease;
+}
+.mk-card:hover {
+  border-color: rgba(48, 150, 255, 0.7);
+  background: rgba(0, 100, 255, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(0, 100, 255, 0.12);
+}
+.mk-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+}
+.mk-card b {
+  font-family: Gilroy, Inter, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  color: var(--blue-2);
+}
+.mk-card span { font-size: 14px; line-height: 1.62; color: #c4d4ef; }
+
+/* -- growth system: flow + copy panel ---------------------------- */
+.mk-system {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: clamp(28px, 5vw, 60px);
+  align-items: center;
+  margin-top: 30px;
+}
+.mk-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.mk-node {
+  border: 1px solid rgba(48, 150, 255, 0.4);
+  border-radius: 14px;
+  background: rgba(0, 100, 255, 0.08);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: center;
+}
+.mk-node b {
+  font-family: Gilroy, Inter, sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+.mk-node span {
+  font-family: 'DM Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  color: #8fc2ff;
+  text-transform: uppercase;
+}
+.mk-node.out { border-color: rgba(233, 194, 90, 0.55); background: rgba(233, 194, 90, 0.07); }
+.mk-node.out b { color: var(--gold); }
+.mk-flow-arrow {
+  margin: 6px auto;
+  color: var(--blue-2);
+  font-size: 13px;
+  line-height: 1;
+}
+.mk-flow-copy {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: clamp(24px, 4vw, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.mk-flow-copy .mk-label { color: var(--blue-2); }
+.mk-flow-line { display: flex; gap: 12px; align-items: baseline; }
+.mk-flow-line .arr { color: var(--blue-2); font-family: 'DM Mono', monospace; font-size: 12px; flex: none; }
+.mk-flow-line p {
+  font-family: Gilroy, Inter, sans-serif;
+  font-weight: 600;
+  font-size: clamp(15px, 1.8vw, 21px);
+  line-height: 1.5;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.mk-flow-line p b { color: var(--blue-2); font-weight: 800; }
+.mk-flow-footer {
+  margin-top: 6px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-family: 'DM Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.2em;
+  color: var(--text-dim);
+}
+
+/* -- why rizz list ------------------------------------------------ */
+.mk-why {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 48px;
+  margin-top: 24px;
+}
+.mk-why-item {
+  padding: 22px 4px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.mk-why-item b {
+  font-family: Gilroy, Inter, sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+.mk-why-item b .mk-num {
+  font-family: 'DM Mono', monospace;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  margin-right: 12px;
+}
+.mk-why-item span { font-size: 14.5px; line-height: 1.6; color: var(--text-dim); }
+
+/* -- growth playbook ---------------------------------------------- */
+.mk-play .logi-card {
+  transition: border-color 0.28s ease, transform 0.3s var(--ease), box-shadow 0.3s ease;
+}
+.mk-play .logi-card:hover {
+  border-color: rgba(48, 150, 255, 0.7);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(0, 100, 255, 0.12);
+}
+
+/* -- problem cards -------------------------------------------------- */
+.mk-prob {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 14px;
+  margin-top: 26px;
+}
+.mk-prob-card {
+  border: 1px solid rgba(48, 150, 255, 0.32);
+  border-radius: 16px;
+  background: rgba(0, 100, 255, 0.06);
+  padding: 24px 24px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: border-color 0.28s ease, transform 0.3s var(--ease), box-shadow 0.3s ease;
+}
+.mk-prob-card:hover {
+  border-color: rgba(48, 150, 255, 0.7);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(0, 100, 255, 0.12);
+}
+.mk-prob-q {
+  font-family: Gilroy, Inter, sans-serif;
+  font-weight: 800;
+  font-size: clamp(17px, 2vw, 21px);
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  color: #fff;
+}
+.mk-prob-sol {
+  padding-top: 14px;
+  border-top: 1px solid rgba(48, 150, 255, 0.35);
+  font-family: Gilroy, Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.55;
+  color: #8fc2ff;
+}
+.mk-prob-sol b { color: var(--blue-2); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.16em; display: block; margin-bottom: 6px; }
+
+/* -- final CTA ------------------------------------------------------ */
+.mk-final { text-align: center; }
+.mk-final .mk-accent { margin-top: 8px; font-size: clamp(20px, 2.6vw, 34px); }
+
+/* == responsive =================================================== */
+@media (max-width: 900px) {
+  .mk-system { grid-template-columns: 1fr; }
+  .mk-flow { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 10px; }
+  .mk-node { flex: 1 1 140px; }
+  .mk-flow-arrow { transform: rotate(-90deg); align-self: center; margin: 0; }
+}
+@media (max-width: 720px) {
+  .mk-stack { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; padding: 2px 4px 12px; scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; }
+  .mk-stack .chip { scroll-snap-align: start; flex: none; }
+  .mk-stack-hint { display: block; }
+}
+@media (max-width: 640px) {
+  .mk-why { grid-template-columns: 1fr; }
+  .mk-prob { grid-template-columns: 1fr; }
+  .mk-stack-hint { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mk-card, .mk-prob-card, .mk-play .logi-card { transition: none; }
+}
+</style>
+</head>
+<body class="pg-page">
+
+<div class="pg-background" aria-hidden="true">
+  <div class="pg-root"></div>
+  <div class="pg-veil"></div>
+</div>
+
+<nav class="social-dock" aria-label="Primary">
+  <ul class="social-dock-list">
+    <li><a class="sd-link sd--nav" href="/"><span class="sd-label">HOME</span><svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></a></li><li><a class="sd-link sd--nav" href="/creators.html"><span class="sd-label">CREATORS</span><svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="4"/><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></a></li><li><a class="sd-link sd--nav" href="/brands.html"><span class="sd-label">BRANDS</span><svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></a></li><li><a class="sd-link sd--nav on" href="/marketing.html" aria-current="page"><span class="sd-label">MARKETING</span><svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></a></li><li><a class="sd-link sd--nav" href="/faqs/index.html"><span class="sd-label">FAQs</span><svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></a></li>
+  </ul>
+</nav>
+
+<nav class="limelight-nav" aria-label="Mobile navigation" data-limelight>
+  <a class="limelight-item" href="/" aria-label="Home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></a>
+  <a class="limelight-item" href="/brands.html" aria-label="Brands"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></a>
+  <a class="limelight-item" href="/creators.html" aria-label="Creators"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="4"/><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></a>
+  <a class="limelight-item" href="/faqs/index.html" aria-label="FAQs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></a>
+  <div class="limelight-indicator" data-limelight-indicator aria-hidden="true"><div class="limelight-glow"></div></div>
+</nav>
+
+<div class="social-floating" id="social-floating">
+  <div class="sd-backdrop" aria-hidden="true"></div>
+  <div class="sd-dock">
+    <a class="sd-fab-item sd--nav" href="/" aria-label="HOME"><span class="sd-tip">HOME</span><svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></a><a class="sd-fab-item sd--nav" href="/creators.html" aria-label="CREATORS"><span class="sd-tip">CREATORS</span><svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="4"/><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></a><a class="sd-fab-item sd--nav" href="/brands.html" aria-label="BRANDS"><span class="sd-tip">BRANDS</span><svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></a><a class="sd-fab-item sd--nav is-open" href="/marketing.html" aria-label="MARKETING"><span class="sd-tip">MARKETING</span><svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></a><a class="sd-fab-item sd--nav" href="/faqs/index.html" aria-label="FAQs"><span class="sd-tip">FAQs</span><svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></a>
+  </div>
+  <button class="sd-fab" id="sd-fab" type="button" aria-label="Toggle menu" aria-expanded="false">
+    <svg class="sd-ico-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+    <svg class="sd-ico-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+</div>
+
+<!-- ============ SIDEBAR ============ -->
+
+<div class="main">
+
+<!-- ============ APPBAR ============ -->
+<header class="appbar" role="banner">
+  <a class="app-brand" href="/" aria-label="RIZZ home">
+    <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="rzM" x1="0" y1="0" x2="64" y2="64"><stop offset="0" stop-color="#3096FF"/><stop offset="1" stop-color="#0064FF"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="18" fill="url(#rzM)"/><text x="32" y="44" text-anchor="middle" font-family="Inter, Gilroy-SemiBold, sans-serif" font-size="30" font-weight="700" fill="#fff">R</text></svg>
+    <span class="app-word">RIZZ</span>
+  </a>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="reg-hero" id="marketing-hero">
+    <div class="container">
+      <p class="mono eyebrow">Creator · Performance · Search · Technology</p>
+      <h1 class="h1 mk-h1" style="max-width:22ch;margin-inline:auto">GROWTH<br><em>BEYOND ONE CHANNEL.</em></h1>
+      <p class="body-copy" style="margin:18px auto 6px;text-align:center;max-width:620px">We help modern brands grow through creators, paid media, Google, SEO, content and technology — all connected under one roof.</p>
+      <div class="cta-actions" style="margin-top:28px">
+        <a class="btn btn-blue btn-lg" href="/brands.html#campaign-inquiry">BUILD YOUR GROWTH PLAN<svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        <a class="btn btn-ghost btn-lg" href="#services">EXPLORE SERVICES</a>
+      </div>
+      <div class="mk-stack" role="list" aria-label="RIZZ growth stack">
+        <span class="chip"><span class="dot"></span>CREATOR MARKETING</span>
+        <span class="chip"><span class="dot"></span>META ADS</span>
+        <span class="chip"><span class="dot"></span>GOOGLE ADS</span>
+        <span class="chip"><span class="dot"></span>SEO</span>
+        <span class="chip"><span class="dot"></span>UGC &amp; CONTENT</span>
+        <span class="chip"><span class="dot"></span>WEB DEVELOPMENT</span>
+        <span class="chip"><span class="dot"></span>CUSTOM SOFTWARE</span>
+        <span class="chip"><span class="dot"></span>PERFORMANCE</span>
+        <span class="chip"><span class="dot"></span>ANALYTICS</span>
+      </div>
+      <p class="mk-stack-hint">THE GROWTH STACK — SWIPE →</p>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <section class="section tight" style="padding-block:10px">
+    <div class="marquee" style="border-block:1px solid var(--line);padding-block:14px;border-radius:0">
+      <div class="marq-track" aria-hidden="false">
+        <span class="marq-item">FULL-STACK GROWTH</span><span class="marq-item gold">CREATORS + CONTENT</span><span class="marq-item">PAID + SEARCH</span><span class="marq-item gold">WEB + SOFTWARE</span><span class="marq-item">ONE ROOF</span><span class="marq-item gold">PERFORMANCE MEASURED</span><span class="marq-item">SEO THAT COMPOUNDS</span><span class="marq-item gold">ANALYTICS, NOT GUESSES</span><span class="marq-item">EVERY CHANNEL CONNECTED</span><span class="marq-item gold">MEASURE, THEN SCALE</span><span class="marq-item">GROWTH BEYOND ONE CHANNEL</span><span class="marq-item gold">INDIA-FIRST</span>
+        <span class="marq-item">FULL-STACK GROWTH</span><span class="marq-item gold">CREATORS + CONTENT</span><span class="marq-item">PAID + SEARCH</span><span class="marq-item gold">WEB + SOFTWARE</span><span class="marq-item">ONE ROOF</span><span class="marq-item gold">PERFORMANCE MEASURED</span><span class="marq-item">SEO THAT COMPOUNDS</span><span class="marq-item gold">ANALYTICS, NOT GUESSES</span><span class="marq-item">EVERY CHANNEL CONNECTED</span><span class="marq-item gold">MEASURE, THEN SCALE</span><span class="marq-item">GROWTH BEYOND ONE CHANNEL</span><span class="marq-item gold">INDIA-FIRST</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ POSITIONING ============ -->
+  <section class="section" id="positioning">
+    <div class="container">
+      <div class="mk-statement reveal">
+        <p class="mono eyebrow">One partner. The whole growth stack.</p>
+        <h2 class="h2">STOP PATCHING GROWTH<br>TOGETHER.</h2>
+        <p class="mk-accent">BUILD IT UNDER ONE ROOF.</p>
+        <p class="body-copy reveal">Creators, paid media, search, content and technology work better when they work together. RIZZ brings the people, strategy and execution together so every channel supports the next.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="section tight" id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="mono eyebrow">What we do</p>
+        <h2 class="h2">EVERYTHING YOUR<br><em>GROWTH NEEDS.</em></h2>
+        <p class="mk-accent" style="margin-top:12px;font-size:clamp(18px,2.4vw,30px)">IN ONE SYSTEM.</p>
+      </div>
+      <div class="mk-services-grid">
+        <div class="mk-card reveal"><p class="mk-label">01 — CREATOR</p><b>Creator marketing</b><span>Find, activate and manage creators who actually fit your audience and brand.</span></div>
+        <div class="mk-card reveal"><p class="mk-label">02 — CONTENT</p><b>UGC &amp; content</b><span>Creator-led content built for organic distribution, paid media and conversion.</span></div>
+        <div class="mk-card reveal"><p class="mk-label">03 — PAID</p><b>Meta ads</b><span>Performance campaigns designed around creative testing, targeting and measurable growth.</span></div>
+        <div class="mk-card reveal"><p class="mk-label">04 — SEARCH</p><b>Google ads</b><span>Capture high-intent demand across Search, Shopping and Google's performance ecosystem.</span></div>
+        <div class="mk-card reveal"><p class="mk-label">05 — ORGANIC</p><b>SEO</b><span>Technical, content and search strategy designed to build sustainable organic acquisition.</span></div>
+        <div class="mk-card reveal"><p class="mk-label">06 — WEB</p><b>Web &amp; digital</b><span>High-converting websites, landing pages and digital experiences built around your growth goals.</span></div>
+        <div class="mk-card reveal"><p class="mk-label">07 — TECHNOLOGY</p><b>Custom software</b><span>Internal tools, dashboards, automation and custom software built around how your business actually works.</span></div>
+        <div class="mk-card reveal"><p class="mk-label">08 — STRATEGY</p><b>Strategy &amp; analytics</b><span>One growth strategy connecting channels, measurement, reporting and decisions.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE RIZZ SYSTEM ============ -->
+  <section class="section tight" id="system">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="mono eyebrow">The RIZZ system</p>
+        <h2 class="h2">CHANNELS WORK<br><em>BETTER TOGETHER.</em></h2>
+        <p class="mk-accent" style="margin-top:12px;font-size:clamp(18px,2.4vw,30px)">WHEN THEY SHARE THE SAME STRATEGY.</p>
+      </div>
+      <div class="mk-system">
+        <div class="mk-flow reveal" aria-label="RIZZ growth system flow">
+          <div class="mk-node"><b>CREATOR</b><span>The reach engine</span></div>
+          <div class="mk-flow-arrow" aria-hidden="true">↓</div>
+          <div class="mk-node"><b>CONTENT</b><span>The message</span></div>
+          <div class="mk-flow-arrow" aria-hidden="true">↓</div>
+          <div class="mk-node"><b>PAID DISTRIBUTION</b><span>Scale what converts</span></div>
+          <div class="mk-flow-arrow" aria-hidden="true">↓</div>
+          <div class="mk-node"><b>SEARCH</b><span>Capture intent</span></div>
+          <div class="mk-flow-arrow" aria-hidden="true">↓</div>
+          <div class="mk-node"><b>CONVERSION</b><span>The experience</span></div>
+          <div class="mk-flow-arrow" aria-hidden="true">↓</div>
+          <div class="mk-node"><b>DATA</b><span>What the market says</span></div>
+          <div class="mk-flow-arrow" aria-hidden="true">↓</div>
+          <div class="mk-node"><b>OPTIMIZATION</b><span>Feed the loop</span></div>
+          <div class="mk-flow-arrow" aria-hidden="true">↓</div>
+          <div class="mk-node out"><b>GROWTH</b><span>Compounding output</span></div>
+        </div>
+        <div class="mk-flow-copy reveal">
+          <p class="mk-label">THE LOOP IN PRACTICE</p>
+          <div class="mk-flow-line"><span class="arr">→</span><p><b>Creator content</b> becomes paid creative.</p></div>
+          <div class="mk-flow-line"><span class="arr">→</span><p><b>Paid campaigns</b> reveal winning messaging.</p></div>
+          <div class="mk-flow-line"><span class="arr">→</span><p><b>SEO</b> captures long-term demand.</p></div>
+          <div class="mk-flow-line"><span class="arr">→</span><p><b>Web experiences</b> turn attention into conversion.</p></div>
+          <div class="mk-flow-line"><span class="arr">→</span><p><b>Analytics</b> tells us what to scale.</p></div>
+          <p class="mk-flow-footer">NOT SEPARATE SERVICES — ONE CONNECTED SYSTEM.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY RIZZ ============ -->
+  <section class="section tight" id="why-rizz">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="mono eyebrow">Why RIZZ</p>
+        <h2 class="h2">ONE TEAM. <em>MORE LEVERAGE.</em></h2>
+      </div>
+      <div class="mk-why reveal">
+        <div class="mk-why-item"><b><span class="mk-num">01</span>ONE STRATEGY</b><span>Every channel works toward the same business objective.</span></div>
+        <div class="mk-why-item"><b><span class="mk-num">02</span>CREATOR + PERFORMANCE</b><span>Organic creator content and paid acquisition can reinforce each other.</span></div>
+        <div class="mk-why-item"><b><span class="mk-num">03</span>SEARCH + CONTENT</b><span>Content doesn't just get posted. It can compound through search.</span></div>
+        <div class="mk-why-item"><b><span class="mk-num">04</span>TECHNOLOGY</b><span>Build the tools and systems your growth operation actually needs.</span></div>
+        <div class="mk-why-item"><b><span class="mk-num">05</span>MEASUREMENT</b><span>Know what's working before you spend more.</span></div>
+        <div class="mk-why-item"><b><span class="mk-num">06</span>ONE PARTNER</b><span>Less coordination. Fewer vendors. More accountability.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GROWTH PLAYBOOK ============ -->
+  <section class="section tight" id="playbook">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="mono eyebrow">How we work</p>
+        <h2 class="h2" style="text-align:left">THE GROWTH<br><em>PLAYBOOK.</em></h2>
+      </div>
+      <div class="logi-grid mk-play" style="margin-top:22px">
+        <div class="logi-card"><b>01 — LISTEN</b><span>Understand the audience, product, market and business objective.</span></div>
+        <div class="logi-card"><b>02 — PLAN</b><span>Choose the right combination of creators, paid media, SEO, content and technology.</span></div>
+        <div class="logi-card"><b>03 — BUILD</b><span>Create the assets, campaigns, landing pages and systems required to execute.</span></div>
+        <div class="logi-card"><b>04 — LAUNCH</b><span>Put the growth engine into market.</span></div>
+        <div class="logi-card"><b>05 — DISTRIBUTE</b><span>Get the work in front of the right people across creators, paid channels and search.</span></div>
+        <div class="logi-card"><b>06 — MEASURE</b><span>Track the metrics that actually matter.</span></div>
+        <div class="logi-card"><b>07 — OPTIMIZE</b><span>Use performance data to improve creative, targeting, search and conversion.</span></div>
+        <div class="logi-card"><b>08 — SCALE</b><span>Double down on what works and build the next growth loop.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ START WITH THE PROBLEM ============ -->
+  <section class="section tight" id="problems">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="mono eyebrow">What are you trying to solve?</p>
+        <h2 class="h2">START WITH THE <em>PROBLEM.</em></h2>
+      </div>
+      <div class="mk-prob">
+        <div class="mk-prob-card reveal"><span class="mk-prob-q">I need more awareness.</span><div class="mk-prob-sol"><b>SOLUTION</b>Creator marketing + UGC + paid distribution</div></div>
+        <div class="mk-prob-card reveal"><span class="mk-prob-q">I need more sales.</span><div class="mk-prob-sol"><b>SOLUTION</b>Performance marketing + creators + conversion</div></div>
+        <div class="mk-prob-card reveal"><span class="mk-prob-q">I need organic growth.</span><div class="mk-prob-sol"><b>SOLUTION</b>SEO + content + technical optimization</div></div>
+        <div class="mk-prob-card reveal"><span class="mk-prob-q">I need better creative.</span><div class="mk-prob-sol"><b>SOLUTION</b>UGC + creators + creative strategy</div></div>
+        <div class="mk-prob-card reveal"><span class="mk-prob-q">I need a better website.</span><div class="mk-prob-sol"><b>SOLUTION</b>Web design + development + CRO</div></div>
+        <div class="mk-prob-card reveal"><span class="mk-prob-q">I need software.</span><div class="mk-prob-sol"><b>SOLUTION</b>Custom software + automation + dashboards</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="section" id="marketing-cta">
+    <div class="container narrow">
+      <div class="mk-final reveal">
+        <p class="mono eyebrow">Let's build</p>
+        <h2 class="h2">YOUR NEXT<br><em>GROWTH ENGINE.</em></h2>
+        <p class="mk-accent">START HERE.</p>
+        <p class="body-copy" style="margin:24px auto 0;text-align:center;max-width:600px">Tell us where you are, where you want to go and what's getting in the way. We'll help map the right combination of creators, media, search, content and technology.</p>
+        <div class="cta-actions" style="margin-top:32px">
+          <a class="btn btn-blue btn-lg" href="/brands.html#campaign-inquiry">BUILD MY GROWTH PLAN<svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          <a class="btn btn-ghost btn-lg" href="/brands.html#campaign-inquiry">TALK TO RIZZ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="fx-footer" aria-label="RIZZ site footer">
+  <div class="fx-footer-glow" aria-hidden="true">
+    <img class="fx-footer-glow-img" src="/originkit/footer-02/gradient-shapes.svg" alt="" width="2238" height="545">
+  </div>
+  <div class="fx-footer-inner">
+    <div class="fx-footer-card">
+      <div class="fx-footer-content">
+        <div class="fx-footer-brand">
+          <div class="fx-footer-brand-text">
+            <p class="fx-brand-name">RIZZ</p>
+            <p class="fx-brand-tag">A full-stack growth partner connecting creators, performance, search and technology for modern brands.</p>
+          </div>
+          <ul class="fx-footer-social" aria-label="Social links">
+            <li style="animation-delay:0ms"><a class="fx-social-btn" href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X" tabindex="0"><span class="fx-social-ico"><img src="/originkit/footer-02/x.svg" alt="" width="20" height="20"></span></a></li>
+            <li style="animation-delay:120ms"><a class="fx-social-btn" href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" tabindex="0"><span class="fx-social-ico"><img src="/originkit/footer-02/instagram.svg" alt="" width="20" height="20"></span></a></li>
+            <li style="animation-delay:240ms"><a class="fx-social-btn" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" tabindex="0"><span class="fx-social-ico"><img src="/originkit/footer-02/linkedin.svg" alt="" width="20" height="20"></span></a></li>
+          </ul>
+          <p class="fx-footer-copy">© <span data-year>2026</span> RIZZ&nbsp;&nbsp;·&nbsp;&nbsp;CREATE. CONNECT. GET PAID.</p>
+        </div>
+        <nav class="fx-footer-links" aria-label="Footer">
+          <div class="fx-footer-col">
+            <p class="fx-col-title">Explore</p>
+            <ul class="fx-col-list">
+              <li><a href="/">Home</a></li>
+              <li><a href="/creators.html">The network</a></li>
+              <li><a href="/register.html">Apply to join</a></li>
+              <li><a href="/faqs/index.html">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="fx-footer-col">
+            <p class="fx-col-title">Services</p>
+            <ul class="fx-col-list">
+              <li><a href="/brands.html">Start a campaign</a></li>
+              <li><a href="/marketing.html">Marketing services</a></li>
+            </ul>
+          </div>
+          <div class="fx-footer-col">
+            <p class="fx-col-title">Legal</p>
+            <ul class="fx-col-list">
+              <li><a href="/privacy.html">Privacy policy</a></li>
+              <li><a href="/terms.html">Terms of use</a></li>
+              <li><a href="/refund-policy.html">Refund policy</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="fx-footer-tetris" aria-hidden="true">
+        <canvas class="fx-tetris-canvas"></canvas>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /.main -->
+
+<script src="/js/site-config.js"></script>
+<script src="/js/brand.js" defer=""></script>
+<script src="/js/pages.js"></script>
+<script src="/js/social-dock.js" defer></script>
+<script defer src="/originkit-dist/rizz-prism-grid.js"></script>
+<script defer src="/originkit-dist/rizz-footer-02.js"></script>
+<script defer src="/originkit-dist/limelight-nav.js"></script>
+
+<script defer src="/originkit-dist/rizz-cascade-text.js"></script>
+</body>
+</html>

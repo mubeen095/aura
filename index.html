@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charSet="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>AuraSphere — India's Creator Network for Brands</title>
+  <meta name="description" content="AuraSphere connects brands with creators across India and manages influencer campaigns from discovery to delivery."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="AuraSphere — India's Creator Network for Brands"/>
+  <meta property="og:site_name" content="AuraSphere"/>
+  <meta property="og:description" content="AuraSphere connects brands with creators across India and manages influencer campaigns from discovery to delivery."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&amp;family=Inter:wght@400;500;600;700;800&amp;family=Instrument+Serif:ital@0;1&amp;family=Roboto+Mono:ital,wght@0,100..700;1,100..700&amp;family=Roboto:ital,wght@0,100..900;1,100..900&amp;display=swap"/>
+  <link rel="stylesheet" href="/css/horizon.css"/>
+  <link rel="stylesheet" href="/css/social-dock.css"/>
+<link rel="stylesheet" href="/originkit-dist/limelight-nav.css">
+
+<link rel="stylesheet" href="/originkit-dist/rizz-footer-02.css">
+  <script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="/js/social-dock.js" defer></script>
+</head>
+<body>
+  <nav class="social-dock" aria-label="Primary">
+    <ul class="social-dock-list">
+      <li>
+        <a class="sd-link sd--nav on" href="/" aria-current="page">
+          <span class="sd-label">HOME</span>
+          <svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </a>
+      </li>
+      <li>
+        <a class="sd-link sd--nav" href="/creators.html">
+          <span class="sd-label">CREATORS</span>
+          <svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="4"/><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </a>
+      </li>
+      <li>
+        <a class="sd-link sd--nav" href="/brands.html">
+          <span class="sd-label">BRANDS</span>
+          <svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </a>
+      </li>
+      <li>
+        <a class="sd-link sd--nav" href="/marketing.html">
+          <span class="sd-label">MARKETING</span>
+          <svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+        </a>
+      </li>
+      <li>
+        <a class="sd-link sd--nav" href="/faqs/index.html">
+          <span class="sd-label">FAQs</span>
+          <svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+<nav class="limelight-nav" aria-label="Mobile navigation" data-limelight>
+  <a class="limelight-item" href="/" aria-label="Home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></a>
+  <a class="limelight-item" href="/brands.html#campaignForm" aria-label="Brands — start a campaign"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></a>
+  <a class="limelight-item" href="/creators.html" aria-label="Creators"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="4"/><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></a>
+  <a class="limelight-item" href="/faqs/index.html" aria-label="FAQs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></a>
+  <div class="limelight-indicator" data-limelight-indicator aria-hidden="true"><div class="limelight-glow"></div></div>
+</nav>
+
+  <div class="social-floating" id="social-floating">
+    <div class="sd-backdrop" aria-hidden="true"></div>
+    <div class="sd-dock">
+      <a class="sd-fab-item sd--nav on" href="/" aria-label="HOME" aria-current="page">
+        <span class="sd-tip">HOME</span>
+        <svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </a>
+      <a class="sd-fab-item sd--nav" href="/brands.html#campaignForm" aria-label="START A CAMPAIGN">
+        <span class="sd-tip">START A CAMPAIGN</span>
+        <svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      </a>
+      <a class="sd-fab-item sd--nav" href="/creators.html" aria-label="CREATORS">
+        <span class="sd-tip">CREATORS</span>
+        <svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="4"/><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </a>
+      <a class="sd-fab-item sd--nav" href="/marketing.html" aria-label="MARKETING">
+        <span class="sd-tip">MARKETING</span>
+        <svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+      </a>
+      <a class="sd-fab-item sd--nav" href="/faqs/index.html" aria-label="FAQs">
+        <span class="sd-tip">FAQs</span>
+        <svg class="sd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+      </a>
+    </div>
+    <button class="sd-fab" id="sd-fab" type="button" aria-label="Toggle social links" aria-expanded="false">
+      <svg class="sd-ico-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+      <svg class="sd-ico-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+
+  <canvas class="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero-vignette" aria-hidden="true"></div>
+
+  <a class="side-menu" href="/brands.html#campaignForm" style="visibility:hidden" aria-label="Start a campaign">
+    <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+    <span class="vertical-text">START</span>
+  </a>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">AURASPHERE<br/>PAN-INDIA CREATOR NETWORK</p>
+    <h1 class="hero-title hero-title--brand">
+      <span class="title-line">THE RIGHT CREATORS.</span>
+      <span class="title-line">THE RIGHT AUDIENCE.</span>
+      <span class="title-line">THE RIGHT IMPACT.</span>
+    </h1>
+    <p class="hero-support">AuraSphere connects brands with India's creators across categories, languages and regions — and manages every campaign from discovery to delivery.</p>
+    <div class="hero-actions">
+      <a class="rz-btn" href="/brands.html#campaignForm">START A CAMPAIGN&nbsp;→</a>
+      <a class="rz-btn rz-btn-ghost" href="/brands.html#campaignForm">TALK TO OUR TEAM</a>
+    </div>
+    <p class="hero-meta">PAN-INDIA&nbsp;&nbsp;•&nbsp;&nbsp;MULTI-LANGUAGE&nbsp;&nbsp;•&nbsp;&nbsp;END-TO-END&nbsp;&nbsp;•&nbsp;&nbsp;AUDIENCE-FIRST</p>
+  </div>
+
+  <div class="scroll-progress" style="visibility:hidden">
+    <div class="scroll-text">SCROLL</div>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+    <div class="section-counter">01 / 02</div>
+  </div>
+
+  <div class="scroll-sections">
+
+    <section class="rz-sec" id="hero-section">
+      <div class="rz-marquee" aria-hidden="true">
+        <div class="rz-marquee-track">
+          <div class="rz-marquee-row">
+            <span class="rz-word">TECH</span><span class="rz-dot">•</span>
+            <span class="rz-word">BEAUTY</span><span class="rz-dot">•</span>
+            <span class="rz-word">FASHION</span><span class="rz-dot">•</span>
+            <span class="rz-word">E-COMMERCE</span><span class="rz-dot">•</span>
+            <span class="rz-word">FOOD &amp; DRINK</span><span class="rz-dot">•</span>
+            <span class="rz-word">GAMING</span><span class="rz-dot">•</span>
+            <span class="rz-word">ENTERTAINMENT</span><span class="rz-dot">•</span>
+            <span class="rz-word">HEALTH</span><span class="rz-dot">•</span>
+          </div>
+          <div class="rz-marquee-row">
+            <span class="rz-word">TECH</span><span class="rz-dot">•</span>
+            <span class="rz-word">BEAUTY</span><span class="rz-dot">•</span>
+            <span class="rz-word">FASHION</span><span class="rz-dot">•</span>
+            <span class="rz-word">E-COMMERCE</span><span class="rz-dot">•</span>
+            <span class="rz-word">FOOD &amp; DRINK</span><span class="rz-dot">•</span>
+            <span class="rz-word">GAMING</span><span class="rz-dot">•</span>
+            <span class="rz-word">ENTERTAINMENT</span><span class="rz-dot">•</span>
+            <span class="rz-word">HEALTH</span><span class="rz-dot">•</span>
+          </div>
+        </div>
+      </div>
+      <p class="rz-sub rz-sub-wide">Campaigns across India's most-watched categories — beauty, fashion, tech, food, gaming, health and more.</p>
+    </section>
+
+    <section class="rz-sec" id="difference-section">
+      <p class="rz-eyebrow">THE DIFFERENCE</p>
+      <h2 class="rz-h2">FOLLOWERS ARE EASY.<br/>INFLUENCE ISN'T.</h2>
+      <p class="rz-sub">We help brands discover and activate creators based on audience, content, category, language and relevance — not follower count alone.</p>
+      <div class="rz-grid rz-grid-3">
+        <div class="rz-card">
+          <span class="rz-num">01</span>
+          <h3>Discover</h3>
+          <p>Find creators who actually fit your brand — audience, category, location, language and content style, matched to your campaign.</p>
+        </div>
+        <div class="rz-card">
+          <span class="rz-num">02</span>
+          <h3>Match</h3>
+          <p>Build the right creator mix. We match creators to your campaign objective, audience and budget.</p>
+        </div>
+        <div class="rz-card">
+          <span class="rz-num">03</span>
+          <h3>Activate</h3>
+          <p>Turn creator partnerships into campaigns. From negotiation and briefing to content delivery and reporting, we handle the process end-to-end.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rz-sec" id="chaos-section">
+      <p class="rz-eyebrow">ONE CAMPAIGN. ONE TEAM. ZERO CHAOS.</p>
+      <h2 class="rz-h2">INFLUENCE,<br/>WITHOUT THE CHAOS.</h2>
+      <p class="rz-sub">From the first creator shortlist to the final report, AuraSphere manages the moving parts so your team doesn't have to.</p>
+      <div class="rz-grid rz-grid-3">
+        <div class="rz-card">
+          <span class="rz-num">01</span>
+          <h3>Discovery</h3>
+          <p>We identify creators based on audience fit, category, language and campaign goals.</p>
+        </div>
+        <div class="rz-card">
+          <span class="rz-num">02</span>
+          <h3>Negotiation</h3>
+          <p>Rates, deliverables, timelines and commercial terms handled by one team.</p>
+        </div>
+        <div class="rz-card">
+          <span class="rz-num">03</span>
+          <h3>Campaign management</h3>
+          <p>Briefs, content approvals, revisions, deadlines and creator communication — managed end-to-end.</p>
+        </div>
+      </div>
+      <div class="rz-grid rz-grid-2">
+        <div class="rz-card">
+          <span class="rz-num">04</span>
+          <h3>Delivery</h3>
+          <p>We keep every creator, deliverable and deadline on track.</p>
+        </div>
+        <div class="rz-card">
+          <span class="rz-num">05</span>
+          <h3>Measurement</h3>
+          <p>Campaign reporting focused on reach, engagement, content and the metrics that matter.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rz-sec" id="india-network-section">
+      <p class="rz-eyebrow">FOR BRANDS</p>
+      <h2 class="rz-h2">ONE COUNTRY.<br/>EVERY AUDIENCE.</h2>
+      <p class="rz-sub">Reach creators across India's cities, languages and communities — from major metros to emerging markets.</p>
+      <div class="rz-pills">
+        <span class="rz-pill">HINDI</span><span class="rz-pill">ENGLISH</span><span class="rz-pill">TELUGU</span>
+        <span class="rz-pill">TAMIL</span><span class="rz-pill">KANNADA</span><span class="rz-pill">MALAYALAM</span>
+        <span class="rz-pill">MARATHI</span><span class="rz-pill">BENGALI</span><span class="rz-pill">GUJARATI</span>
+        <span class="rz-pill">PUNJABI</span><span class="rz-pill">AND MORE</span>
+      </div>
+      <p class="rz-note">CREATOR NETWORK ACROSS INDIA</p>
+      <div class="rz-pills">
+        <span class="rz-pill">MUMBAI</span><span class="rz-pill">DELHI NCR</span>
+        <span class="rz-pill">BENGALURU</span><span class="rz-pill">HYDERABAD</span>
+        <span class="rz-pill">CHENNAI</span><span class="rz-pill">KOLKATA</span>
+        <span class="rz-pill">PUNE</span><span class="rz-pill">AHMEDABAD</span>
+        <span class="rz-pill">JAIPUR</span><span class="rz-pill">KOCHI</span>
+        <span class="rz-pill">AND BEYOND</span>
+      </div>
+    </section>
+
+    <section class="rz-sec" id="solutions-section">
+      <p class="rz-eyebrow">BUILT FOR MODERN BRANDS</p>
+      <h2 class="rz-h2">CREATOR CAMPAIGNS,<br/>BUILT AROUND YOUR GOAL.</h2>
+      <div class="rz-grid">
+        <div class="rz-card">
+          <span class="rz-num">01</span>
+          <h3>Brand awareness</h3>
+          <p>Reach relevant audiences through creators people already follow and trust.</p>
+        </div>
+        <div class="rz-card">
+          <span class="rz-num">02</span>
+          <h3>Product launches</h3>
+          <p>Put new products in the hands of creators who can make people care.</p>
+        </div>
+        <div class="rz-card">
+          <span class="rz-num">03</span>
+          <h3>UGC</h3>
+          <p>Creator-made content for organic social, websites and paid campaigns.</p>
+        </div>
+        <div class="rz-card">
+          <span class="rz-num">04</span>
+          <h3>Performance campaigns</h3>
+          <p>Build creator campaigns around measurable outcomes.</p>
+        </div>
+        <div class="rz-card">
+          <span class="rz-num">05</span>
+          <h3>Regional campaigns</h3>
+          <p>Reach specific cities, states, languages and communities across India.</p>
+        </div>
+        <div class="rz-card">
+          <span class="rz-num">06</span>
+          <h3>Long-term partnerships</h3>
+          <p>Turn successful creator collaborations into recurring brand relationships.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rz-sec" id="matching-section">
+      <p class="rz-eyebrow">NOT JUST FOLLOWERS</p>
+      <h2 class="rz-h2">FIND CREATORS<br/>PEOPLE ACTUALLY TRUST.</h2>
+      <p class="rz-sub">The right creator isn't always the one with the biggest following. We look at content quality, audience relevance, category fit, language, geography and engagement to help brands build creator campaigns that feel authentic.</p>
+      <div class="rz-pills">
+        <span class="rz-pill">AUDIENCE FIT</span><span class="rz-pill">CONTENT QUALITY</span>
+        <span class="rz-pill">CATEGORY</span><span class="rz-pill">LANGUAGE</span>
+        <span class="rz-pill">LOCATION</span><span class="rz-pill">ENGAGEMENT</span>
+      </div>
+    </section>
+
+    <section class="rz-sec rz-band" id="brands-band">
+      <p class="rz-eyebrow">BRANDS WE'D LOVE TO WORK WITH</p>
+      <p class="rz-note">Names on our radar — aspirations, not a client list. When we earn it, this becomes proof.</p>
+      <p class="rz-brandlist">Mamaearth · SUGAR · Lakmé · Uber · boAt · Nykaa · Wakefit · Plum · The Derma Co. · Foxtale · Minimalist</p>
+    </section>
+
+    <section class="rz-sec" id="process-section">
+      <p class="rz-eyebrow">HOW IT WORKS</p>
+      <h2 class="rz-h2">FROM BRIEF<br/>TO CAMPAIGN.</h2>
+      <div class="rz-grid rz-grid-2">
+        <div class="rz-card">
+          <span class="rz-num">01</span>
+          <h3>Tell us the goal</h3>
+          <p>Share your campaign objective, audience, category, geography and budget.</p>
+        </div>
+        <div class="rz-card">
+          <span class="rz-num">02</span>
+          <h3>We build the creator mix</h3>
+          <p>We identify creators aligned with the campaign.</p>
+        </div>
+        <div class="rz-card">
+          <span class="rz-num">03</span>
+          <h3>We run the campaign</h3>
+          <p>Negotiation, briefs, content, approvals, timelines and deliverables are managed.</p>
+        </div>
+        <div class="rz-card">
+          <span class="rz-num">04</span>
+          <h3>You get the results</h3>
+          <p>Receive campaign reporting and insights.</p>
+        </div>
+      </div>
+      <div class="rz-actions">
+        <a class="rz-btn" href="/brands.html#campaignForm">START A CAMPAIGN&nbsp;→</a>
+      </div>
+    </section>
+
+    <section class="rz-sec" id="final-cta-section">
+      <p class="rz-eyebrow">AURASPHERE</p>
+      <h2 class="rz-h2">YOUR NEXT CAMPAIGN<br/>STARTS HERE.</h2>
+      <p class="rz-sub">Tell us what you're trying to achieve. We'll help you find the creators to make it happen.</p>
+      <div class="rz-actions">
+        <a class="rz-btn" href="/brands.html#campaignForm">START A CAMPAIGN&nbsp;→</a>
+        <a class="rz-btn rz-btn-ghost" href="/brands.html#campaignForm">TALK TO OUR TEAM</a>
+      </div>
+      <div class="rz-tags">CREATOR-FIRST&nbsp;&nbsp;•&nbsp;&nbsp;AUDIENCE-LED&nbsp;&nbsp;•&nbsp;&nbsp;PAN-INDIA</div>
+    </section>
+
+    <section class="rz-sec" id="brand-faqs">
+      <p class="rz-eyebrow">BRAND FAQS</p>
+      <h2 class="rz-h2">ASK US ANYTHING.</h2>
+      <div class="rz-faq">
+        <details>
+          <summary>How do you select creators?</summary>
+          <p>We look at audience relevance, content, category, language, geography, engagement and campaign requirements.</p>
+        </details>
+        <details>
+          <summary>Can you run campaigns across multiple Indian languages?</summary>
+          <p>Yes — campaigns can be structured around regional audiences and language requirements based on available creator supply.</p>
+        </details>
+        <details>
+          <summary>What types of campaigns do you manage?</summary>
+          <p>Brand awareness, product launches, UGC, regional campaigns, performance campaigns and long-term creator partnerships.</p>
+        </details>
+        <details>
+          <summary>Do you handle creator negotiation?</summary>
+          <p>Yes. Campaign communication, commercial discussions and deliverables can be managed through AuraSphere.</p>
+        </details>
+        <details>
+          <summary>Do you handle content approvals and deadlines?</summary>
+          <p>Yes. AuraSphere can coordinate creator briefs, approvals, revisions and campaign timelines.</p>
+        </details>
+        <details>
+          <summary>Can you help with UGC?</summary>
+          <p>Yes — creator-generated content can be incorporated into campaigns depending on the brief and usage requirements.</p>
+        </details>
+        <details>
+          <summary>How quickly can a campaign start?</summary>
+          <p>Campaign timelines depend on the scope, creator requirements and approvals. Share your goal and we'll plan a realistic timeline.</p>
+        </details>
+        <details>
+          <summary>What information do you need to start a campaign?</summary>
+          <p>Campaign objective, target audience, category, geography, language, deliverables, timeline and budget are useful starting points.</p>
+        </details>
+      </div>
+      <div class="rz-actions">
+        <a class="rz-btn" href="/brands.html#campaignForm">START A CAMPAIGN&nbsp;→</a>
+        <a class="rz-link" href="/faqs/index.html">MORE FAQS →</a>
+      </div>
+    </section>
+
+    <footer class="fx-footer" aria-label="AuraSphere site footer">
+  <div class="fx-footer-glow" aria-hidden="true">
+    <img class="fx-footer-glow-img" src="/originkit/footer-02/gradient-shapes.svg" alt="" width="2238" height="545">
+  </div>
+  <div class="fx-footer-inner">
+    <div class="fx-footer-card">
+      <div class="fx-footer-content">
+        <div class="fx-footer-brand">
+          <div class="fx-footer-brand-text">
+            <p class="fx-brand-name">AuraSphere</p>
+            <p class="fx-brand-tag">Pan-India creator network and influencer marketing. We connect brands with the right creators across India — and manage campaigns end to end.</p>
+          </div>
+          <ul class="fx-footer-social" aria-label="Social links">
+            <li style="animation-delay:0ms"><a class="fx-social-btn" href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X" tabindex="0"><span class="fx-social-ico"><img src="/originkit/footer-02/x.svg" alt="" width="20" height="20"></span></a></li>
+            <li style="animation-delay:120ms"><a class="fx-social-btn" href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" tabindex="0"><span class="fx-social-ico"><img src="/originkit/footer-02/instagram.svg" alt="" width="20" height="20"></span></a></li>
+            <li style="animation-delay:240ms"><a class="fx-social-btn" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" tabindex="0"><span class="fx-social-ico"><img src="/originkit/footer-02/linkedin.svg" alt="" width="20" height="20"></span></a></li>
+          </ul>
+          <p class="fx-footer-copy">© <span data-year>2026</span> AuraSphere&nbsp;&nbsp;·&nbsp;&nbsp;INDIA'S CREATOR NETWORK FOR BRANDS</p>
+        </div>
+        <nav class="fx-footer-links" aria-label="Footer">
+          <div class="fx-footer-col">
+            <p class="fx-col-title">Explore</p>
+            <ul class="fx-col-list">
+              <li><a href="/">Home</a></li>
+              <li><a href="/creators.html">The network</a></li>
+              <li><a href="/brands.html#campaignForm">Start a campaign</a></li>
+              <li><a href="/faqs/index.html">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="fx-footer-col">
+            <p class="fx-col-title">Services</p>
+            <ul class="fx-col-list">
+              <li><a href="/brands.html">Brands</a></li>
+              <li><a href="/marketing.html">Marketing services</a></li>
+              <li><a href="/register.html">Join as creator</a></li>
+            </ul>
+          </div>
+          <div class="fx-footer-col">
+            <p class="fx-col-title">Legal</p>
+            <ul class="fx-col-list">
+              <li><a href="/privacy.html">Privacy policy</a></li>
+              <li><a href="/terms.html">Terms of use</a></li>
+              <li><a href="/refund-policy.html">Refund policy</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="fx-footer-tetris" aria-hidden="true">
+        <canvas class="fx-tetris-canvas"></canvas>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </div>
+
+  <script type="module" src="/js/horizon-hero.js"></script>
+<script defer src="/originkit-dist/rizz-footer-02.js"></script>
+<script defer src="/originkit-dist/limelight-nav.js"></script>
+
+</body>
+</html>

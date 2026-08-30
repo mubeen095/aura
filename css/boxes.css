@@ -1,0 +1,71 @@
+/* host layer: fixed, behind page content */
+.boxes-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: #05060c;
+}
+main { position: relative; z-index: 1; }
+
+/* ================================================================
+   Background boxes — port of the background-boxes React component
+   (skewed grid of cells; cell lights up with a random pastel on hover)
+   ================================================================ */
+
+.bx-veil {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(ellipse 72% 72% at 50% 42%, rgba(6, 6, 6, 0.05) 30%, rgba(6, 6, 6, 0.9) 100%);
+}
+
+.bx-grid {
+  position: absolute;
+  left: 25%;
+  top: -25%;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: flex;
+  padding: 16px;
+  transform: translate(-50%, -50%) translate(-40%, -60%) skewX(-48deg) skewY(14deg) scale(0.675);
+  will-change: transform;
+}
+
+.bx-row {
+  width: 64px;
+  height: 32px;
+  border-left: 1px solid var(--bx-line, rgba(51, 65, 85, 0.8));
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.bx-cell {
+  position: relative;
+  width: 64px;
+  height: 32px;
+  border-right: 1px solid var(--bx-line, rgba(51, 65, 85, 0.8));
+  border-top: 1px solid var(--bx-line, rgba(51, 65, 85, 0.8));
+  transition: background-color 2s linear;
+}
+.bx-cell:hover {
+  background-color: var(--c, #7dd3fc);
+  transition-duration: 0s;
+}
+
+.bx-cross {
+  position: absolute;
+  top: -14px;
+  left: -22px;
+  width: 24px;
+  height: 40px;
+  color: rgba(51, 65, 85, 0.8);
+  stroke-width: 1px;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bx-cell { transition: none; }
+}

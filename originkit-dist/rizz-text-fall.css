@@ -1,0 +1,50 @@
+/* ================================================================
+   rizz-text-fall — vanilla port of Originkit "Text Fall" background.
+   A fixed full-viewport canvas layer behind the page content: glyphs
+   assemble into the brand text, fall under gravity on entry, and push
+   aside under the cursor. Content (main) stacks above the layer.
+   ================================================================ */
+
+.tf-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: #05070d;
+  touch-action: manipulation;
+}
+
+.tf-background .tf-veil {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(ellipse 90% 90% at 50% 40%, rgba(5, 7, 13, 0) 30%, rgba(5, 7, 13, 0.72) 100%);
+}
+
+.tf-root {
+  position: absolute;
+  inset: 0;
+  min-width: 200px;
+  min-height: 120px;
+  overflow: hidden;
+  cursor: pointer;
+  background: transparent;
+  touch-action: manipulation;
+}
+.tf-root canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.tf-page main {
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tf-background { display: none; }
+}

@@ -1,0 +1,95 @@
+/* ================================================================
+   limelight-nav — vanilla port of the "LimelightNav" component.
+   A fixed bottom navigation (shown < 1024px, where the social dock
+   hides) with a "limelight" indicator that slides to the active tab:
+   a small aura-gradiented bar at the top of the nav plus a soft cone
+   of glow below it. Icons + `<a>` items come from markup.
+   ================================================================ */
+
+.limelight-nav {
+  --lime-1: #86dcf7;
+  --lime-2: #dfc2ff;
+  --lime-3: #ffc2e3;
+
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  z-index: 45;
+  display: none;
+  align-items: center;
+  height: 64px;
+  padding: 0 8px;
+  border-radius: 16px;
+  background: rgba(10, 12, 26, 0.7);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  backdrop-filter: blur(18px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.limelight-item {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 16px;
+  color: #fff;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.limelight-item > svg {
+  width: 22px;
+  height: 22px;
+  opacity: 0.4;
+  transition: opacity 120ms ease-in-out;
+}
+.limelight-item.is-active > svg {
+  opacity: 1;
+}
+
+.limelight-indicator {
+  position: absolute;
+  top: 0;
+  left: -999px;
+  z-index: 1;
+  width: 44px;
+  height: 5px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--lime-1), var(--lime-2), var(--lime-3));
+  box-shadow: 0 50px 15px rgba(185, 166, 255, 0.55);
+}
+.limelight-nav.is-ready .limelight-indicator {
+  transition: left 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.limelight-glow {
+  position: absolute;
+  left: -30%;
+  top: 5px;
+  width: 160%;
+  height: 56px;
+  pointer-events: none;
+  clip-path: polygon(5% 100%, 25% 0, 75% 0, 95% 100%);
+  background: linear-gradient(to bottom, rgba(185, 166, 255, 0.32), rgba(134, 220, 247, 0.08) 40%, transparent);
+}
+
+/* mobile + tablet: the dock is hidden below 1024px, so the limelight takes over */
+@media (max-width: 1023px) {
+  .limelight-nav {
+    display: flex;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .limelight-nav.is-ready .limelight-indicator {
+    transition: none;
+  }
+  .limelight-glow {
+    display: none;
+  }
+}
