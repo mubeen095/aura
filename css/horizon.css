@@ -657,6 +657,49 @@ body {
 }
 .rz-band .rz-note { margin: 8px 0 14px; }
 
+/* ---- AuraSphere logo (homepage) ---- */
+.index-brand {
+  position: fixed;
+  top: calc(18px + env(safe-area-inset-top, 0px));
+  left: 20px;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px 8px 8px;
+  border-radius: 14px;
+  background: rgba(10, 12, 26, 0.55);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  backdrop-filter: blur(10px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: opacity 0.3s ease, background 0.3s ease;
+  animation: rz-hero-rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+.index-brand:hover { background: rgba(14, 18, 36, 0.75); }
+.index-brand .app-logo { height: 26px; }
+.index-brand .app-word {
+  font-family: Gilroy, Inter, sans-serif;
+  font-weight: 800;
+  font-size: 14.5px;
+  letter-spacing: 0.02em;
+}
+
+.hero-logo {
+  display: block;
+  width: min(148px, 30vw);
+  margin: 0 auto 20px;
+  filter: drop-shadow(0 18px 40px rgba(110, 150, 255, 0.35));
+  animation: rz-hero-rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
+}
+
+@media (max-width: 430px) {
+  .hero-logo {
+    width: min(96px, 34vw);
+    margin-bottom: 14px;
+  }
+}
+
 @media (max-width: 899px) {
   .hero-title--brand { font-size: clamp(28px, 8.5vw, 46px); }
   .hero-eyebrow { font-size: 10px; letter-spacing: 0.22em; }
@@ -669,5 +712,5 @@ body {
   .rz-sub { font-size: clamp(15.5px, 4.2vw, 17px); line-height: 1.6; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .hero-eyebrow, .hero-support, .hero-actions, .hero-meta { animation: none; opacity: 1; }
+  .hero-eyebrow, .hero-support, .hero-actions, .hero-meta, .hero-logo, .index-brand { animation: none; opacity: 1; }
 }

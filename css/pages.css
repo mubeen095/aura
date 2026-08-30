@@ -204,6 +204,12 @@ body.appbar-in .appbar { opacity: 1; transform: translateY(0); }
   transition: opacity 0.25s ease;
 }
 .app-brand:hover { opacity: 0.85; }
+.app-logo {
+  width: auto;
+  height: 28px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 14px rgba(130, 170, 255, 0.35));
+}
 .app-word {
   font-family: Gilroy, Inter, sans-serif;
   font-weight: 800;
