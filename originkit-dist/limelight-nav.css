@@ -3,7 +3,7 @@
    A fixed bottom navigation (shown < 1024px, where the social dock
    hides) with a "limelight" indicator that slides to the active tab:
    a small aura-gradiented bar at the top of the nav plus a soft cone
-   of glow below it. Icons + `<a>` items come from markup.
+   of glow below it. Icons + labels + `<a>` items come from markup.
    ================================================================ */
 
 .limelight-nav {
@@ -13,17 +13,19 @@
 
   position: fixed;
   left: 50%;
-  bottom: 18px;
+  bottom: calc(14px + env(safe-area-inset-bottom, 0px));
   transform: translateX(-50%);
   z-index: 45;
   display: none;
   align-items: center;
-  height: 64px;
-  padding: 0 8px;
-  border-radius: 16px;
-  background: rgba(10, 12, 26, 0.7);
-  -webkit-backdrop-filter: blur(18px) saturate(150%);
-  backdrop-filter: blur(18px) saturate(150%);
+  width: max-content;
+  max-width: calc(100vw - 12px);
+  min-height: 60px;
+  padding: 8px 6px;
+  border-radius: 18px;
+  background: rgba(10, 12, 26, 0.72);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  backdrop-filter: blur(20px) saturate(160%);
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   touch-action: manipulation;
@@ -34,21 +36,47 @@
   position: relative;
   z-index: 2;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  padding: 0 16px;
+  gap: 4px;
+  width: 58px;
+  min-height: 44px;
+  padding: 4px 6px 2px;
   color: #fff;
   text-decoration: none;
+  border-radius: 12px;
   -webkit-tap-highlight-color: transparent;
+  transition: background 160ms ease, transform 160ms ease;
+}
+.limelight-item:active {
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(0.94);
 }
 .limelight-item > svg {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   opacity: 0.4;
-  transition: opacity 120ms ease-in-out;
+  transition: opacity 160ms ease-in-out;
 }
 .limelight-item.is-active > svg {
+  opacity: 1;
+}
+
+.limelight-label {
+  font-family: 'DM Mono', 'Roboto Mono', ui-monospace, SFMono-Regular, monospace;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.55);
+  opacity: 0.75;
+  transition: color 220ms ease, opacity 220ms ease;
+}
+.limelight-item.is-active .limelight-label {
+  color: #fff;
   opacity: 1;
 }
 
@@ -57,7 +85,7 @@
   top: 0;
   left: -999px;
   z-index: 1;
-  width: 44px;
+  width: 38px;
   height: 5px;
   border-radius: 999px;
   background: linear-gradient(90deg, var(--lime-1), var(--lime-2), var(--lime-3));
@@ -76,6 +104,17 @@
   pointer-events: none;
   clip-path: polygon(5% 100%, 25% 0, 75% 0, 95% 100%);
   background: linear-gradient(to bottom, rgba(185, 166, 255, 0.32), rgba(134, 220, 247, 0.08) 40%, transparent);
+}
+
+/* very narrow phones: tighten spacing so 5 tabs always fit */
+@media (max-width: 359px) {
+  .limelight-item {
+    width: 52px;
+  }
+  .limelight-label {
+    font-size: 8.5px;
+    letter-spacing: 0.08em;
+  }
 }
 
 /* mobile + tablet: the dock is hidden below 1024px, so the limelight takes over */

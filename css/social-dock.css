@@ -204,8 +204,11 @@
 .social-floating.open .sd-fab .sd-ico-share { display: none; }
 .social-floating.open .sd-fab .sd-ico-close { display: block; }
 
-/* desktop (≥1024): show the left pill dock, hide the floating FAB */
+/* always hidden: mobile uses the bottom limelight nav as its single
+   navigation, so the floating FAB is redundant on every viewport */
+.social-floating { display: none; }
+
+/* desktop (≥1024): show the left pill dock */
 @media (min-width: 1024px) {
   .social-dock { display: block; }
-  .social-floating { display: none; }
 }
