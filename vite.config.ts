@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
     outDir: "originkit-dist",
-    emptyOutDir: true,
+    emptyOutDir: false,
     sourcemap: false,
     rollupOptions: {
       input: "src/rizz-clickfx.tsx",
