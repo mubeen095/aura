@@ -1,0 +1,4 @@
+node_modules/
+.DS_Store
+originkit-dist/rizz-clickfx.js
+originkit-dist/rizz-clickfx.css
