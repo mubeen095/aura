@@ -6,7 +6,7 @@
    ============================================================ */
 window.RIZZ_CONFIG = {
   brand: {
-    name: 'AuraSphere',
+    name: 'AURA SPHERE',
     legalName: 'AuraSphere',
     tagline: 'Make influence matter.',
     mode: 'Creator-Led Growth + Marketing'

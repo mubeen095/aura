@@ -227,7 +227,7 @@
       ['Audience gender', m.audienceGender.join(', ')],
       ['Past collaborations', m.pastCollabs],
       ['Portfolio', m.portfolioUrl],
-      ['Why Aura Sphere', m.whyJoin]
+      ['Why AURA SPHERE', m.whyJoin]
     ]));
   }
 
