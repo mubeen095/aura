@@ -701,12 +701,12 @@ body {
 }
 
 @media (max-width: 899px) {
-  .hero-title--brand { font-size: clamp(28px, 8.5vw, 46px); }
+  .hero-title--brand { font-size: clamp(26px, 8.5vw, 44px); }
   .hero-eyebrow { font-size: 10px; letter-spacing: 0.22em; }
   .hero-meta { font-size: 9.5px; letter-spacing: 0.18em; }
 }
 @media (max-width: 430px) {
-  .hero-title--brand { font-size: clamp(26px, 8vw, 33px); }
+  .hero-title--brand { font-size: clamp(24px, 8vw, 31px); }
   .hero-support { font-size: 15px; line-height: 1.6; }
   .rz-h2 { font-size: clamp(28px, 7.6vw, 38px); text-wrap: balance; }
   .rz-sub { font-size: clamp(15.5px, 4.2vw, 17px); line-height: 1.6; }
