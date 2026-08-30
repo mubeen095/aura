@@ -11,7 +11,7 @@
   var cfg = window.RIZZ_CONFIG || {};
   var brand = cfg.brand || {};
   var contact = cfg.contact || {};
-  var name = brand.name || 'RIZZ';
+  var name = brand.name || 'AuraSphere';
 
   function onReady(fn) {
     if (document.readyState === 'loading') {

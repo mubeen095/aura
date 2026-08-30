@@ -6,10 +6,10 @@
    ============================================================ */
 window.RIZZ_CONFIG = {
   brand: {
-    name: 'RIZZ',
-    legalName: 'RIZZ',
-    tagline: 'Creators build influence. We build the opportunities.',
-    mode: 'Creator Management + Influencer Marketing'
+    name: 'AuraSphere',
+    legalName: 'AuraSphere',
+    tagline: 'Make influence matter.',
+    mode: 'Creator-Led Growth + Marketing'
   },
   contact: {
     email: '',
